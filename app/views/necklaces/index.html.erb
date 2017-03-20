@@ -1,0 +1,12 @@
+<h1> All Necklaces </h1>
+<div class="row">
+<% @necklaces.each do  |necklace| %>
+<div class="col-md-4">
+<p>
+  <div class="well">
+  <a href="/necklaces/<%= necklace.id %>"><%= necklace.name %></a><br>
+  Description: <%= necklace.description %> <br>
+  Image : <img class="necklace-image" src="<%= necklace.image %>" alt="<%= necklace.name %>"> <br>
+  Price: <%= necklace.price %> <br>
+  </p>
+  <% end %>
